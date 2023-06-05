@@ -2,6 +2,7 @@
 date: '2020-01-10'
 title: 'Billiard Simulation'
 github: 'https://github.com/oluevaera/Billiard-SImulation'
+external: 'https://github.com/oluevaera/Billiard-SImulation'
 tech:
   - C++
   - OpenGL

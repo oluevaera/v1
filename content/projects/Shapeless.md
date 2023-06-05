@@ -2,7 +2,7 @@
 date: '2019-11-12'
 title: 'Shapeless'
 github: 'https://github.com/oluevaera/Shapeless-CGJ19'
-external: ''
+external: 'https://github.com/oluevaera/Shapeless-CGJ19'
 tech:
   - C#
   - Unity
