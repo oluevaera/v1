@@ -1,0 +1,25 @@
+name: Deactivate old deployments
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  deactivate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deactivate old deployments
+        run: |
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          REPO=${{ github.repository }}
+          curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" \
+            "https://api.github.com/repos/$REPO/pages/builds?per_page=100" \
+            | jq '.[] | select(.status == "built" and .commit.sha != env.GITHUB_SHA) | .id' \
+            | xargs -I % curl -X POST -H "Authorization: Bearer $GITHUB_TOKEN" \
+              "https://api.github.com/repos/$REPO/pages/builds/%/restore'
+
