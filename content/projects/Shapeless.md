@@ -8,7 +8,7 @@ tech:
   - Unity
   - Git
   - Windows
-company: 'Coventry University'
+company: 'University project'
 showInProjects: true
 ---
 
