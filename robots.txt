@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://oluevaera.github.io/sitemap.xml
+Sitemap: https://oluevaera.github.io/sitemap-index.xml
 Host: https://oluevaera.github.io
