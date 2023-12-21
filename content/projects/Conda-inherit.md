@@ -1,5 +1,5 @@
 ---
-date: '2023-12-20'
+date: '2023-12-21'
 title: 'Conda-inherit'
 github: 'https://github.com/oluevaera/tmux-conda-inherit'
 tech:
